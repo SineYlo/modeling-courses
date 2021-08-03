@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--========== КОДИРОВКА СТРАНИЦЫ ==========-->
+  <meta charset="UTF-8">
+  <!--========== НАСТРОЙКА АДАПТИВНОСТИ СТРАНИЦЫ ==========-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!--========== ЗАГОЛОВОК СТРАНИЦЫ В БРАУЗЕРЕ ==========-->
+  <title>Курсы 3D моделирования</title>
+  <!--========== ПРЕДВАРИТЕЛЬНАЯ ЗАГРУЗКА ШРИФТОВ ==========-->
+  <link rel="preload" href="fonts/roboto_regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto_bold.woff2" as="font" crossorigin>
+  <!--========== ПОДКЛЮЧЕНИЕ ГОТОВЫХ РЕШЕНИЙ НА JAVASCRIPT ==========-->
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css?ver=1" media="screen">
+  <!--========== ПОДКЛЮЧАЕМ ФАЙЛЫ СТИЛЕЙ ==========-->
+  <link rel="stylesheet" href="css/destyle.css?ver=1" media="screen">
+  <link rel="stylesheet" href="css/styles.css?ver=1" media="screen">
+  <!--========== ПРЕДОСТАВЛЯЕТ ИНФОРМАЦИЮ ОБ АВТОРЕ ==========-->
+  <link rel="me" href="https://sineylo-dev.io">
+  <link rel="me" href="mailto:v.vavshchik@pm.me">
+  <!--========== ПОДКЛЮЧАЕМ ФАВИКОН ==========-->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!--========== ОТКЛЮЧАЕМ ФОРМИРОВАНИЕ ССЫЛКИ НА УСТРОЙСТВАХ ПОД УПРАВЛЕНИЕМ IOS ==========-->
+  <meta name="format-detection" content="telephone=no">
+  <!--========== СЕО ==========-->
+  <meta name="description" content="Здесь вы можете кратко ознакомиться с курсами, которые предоставляет онлайн-университет Skillbox">
+  <meta name="keywords" content="курсы, сайт, скиллбокс, обучение, моделирование">
+  <!--========== КРАТКОЕ ОПИСАНИЕ ТЕМЫ СТРАНИЦЫ ==========-->
+  <meta name="subject" content="Курсы 3D моделирования на образовательной платформе Skillbox">
+  <!--========== УПРАВЛЕНИЕ ДОСТУПОМ ПОИСКОВЫХ РОБОТОВ К СТРАНИЦЕ ==========-->
+  <meta name="robots" content="none">
+  <meta name="googlebot" content="none">
+  <!--========== АВТОР СТРАНИЦЫ ==========-->
+  <meta name="author" content="SineYlo">
+  <!--========== КОПИРАЙТТ ==========-->
+  <meta name="copyright" content="Skillbox">
+  <!--========== АДРЕС АВТОРА ==========-->
+  <meta name="address" content="Россия, Хабаровск">
+  <!--========== УСТАНАВЛИВАЕМ ЦВЕТ ВКЛАДКИ В БРАУЗЕРЕ ==========-->
+  <meta name="theme-color" content="hsl(246, 100%, 58%)">
+  <!--========== ТЕМЫ КОТОРЫЕ ИСПОЛЬЗУЮТСЯ НА САЙТЕ ==========-->
+  <meta name="color-scheme" content="light">
+  <!--========== ДОБАВЛЯЕТ САЙТ НА ГЛАВНЫЙ ЭКРАН КАК ПРИЛОЖЕНИЕ ДЛЯ ANDROID ==========-->
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body class="body">
+  <!--========== ШАПКА САЙТА ==========-->
+  <header class="site-header">
+    <div class="container site-header__container">
+      <div class="row">
+        <div class="site-header__content">
+          <a class="site-header__logo-link" href="#">
+            <picture>
+              <source srcset="images/320/skillbox.svg" media="(min-width:320px) and (max-width: 575px)">
+              <img class="site-header__logo-picture" src="images/general/skillbox.svg" alt="Логотип онлайн-университета Скиллбокс">
+            </picture>
+          </a>
+          <nav class="site-header__nav" aria-label="Основная навигация по сайту">
+            <ul class="site-header__list">
+              <li class="site-header__item">
+                <a class="site-header__link" href="#">Главная</a>
+              </li>
+              <li class="site-header__item">
+                <a class="site-header__link" href="#section-about">О нас</a>
+              </li>
+              <li class="site-header__item">
+                <a class="site-header__link" href="#section-teachers">Преподаватели</a>
+              </li>
+              <li class="site-header__item">
+                <a class="site-header__link" href="#section-courses">Курсы</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="site-header__burger burger-header" type="button" aria-label="Открыть меню">
+            <span class="burger-header__line burger-header__line_1"></span>
+            <span class="burger-header__line burger-header__line_2"></span>
+            <span class="burger-header__line burger-header__line_3"></span>
+            <span class="burger-header__line burger-header__line_4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--========== ОСНОВНАЯ ЧАСТЬ САЙТА ==========-->
+  <main class="site-main">
+    <!--========== СЕКЦИЯ HERO ==========-->
+    <section class="section-hero">
+      <div class="container section-hero__container">
+        <div class="row">
+          <div class="section-hero__content">
+            <h1 class="section-hero__title">Курсы 3D моделирования</h1>
+            <p class="section-hero__desc">
+              Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не&nbsp;следует, однако, забывать.
+            </p>
+            <button class="section-hero__btn btn" type="button" onclick="window.location.href='#section-courses'">Выбрать курс</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========== СЕКЦИЯ ABOUT ==========-->
+    <section class="section-about" id="section-about">
+      <div class="container section-about__container">
+        <div class="row">
+          <div class="section-about__content content-about">
+            <div class="content-about__top">
+              <h2 class="section-about__title title">Преимущества обучения в skillbox</h2>
+              <p class="section-about__desc">
+                Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно в&nbsp;разрезе маркетинговых предпосылок.
+              </p>
+            </div>
+            <div class="content-about__bottom">
+              <ul class="section-about__list">
+                <li class="section-about__item item-about section-about__item_eye">
+                  <p class="item-about__desc">
+                    Результат вашего обучения является самым важным для нас приоритетом
+                  </p>
+                </li>
+                <li class="section-about__item item-about section-about__item_fingers">
+                  <p class="item-about__desc">
+                    Лично познакомитесь с&nbsp;одним из&nbsp;своих будущих преподавателей
+                  </p>
+                </li>
+                <li class="section-about__item item-about section-about__item_shout">
+                  <p class="item-about__desc">
+                    Значимость этих проблем очевидна, поэтому стоит всегда быть внимательным
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========== СЕКЦИЯ TEACHERS ==========-->
+    <section class="section-teachers" id="section-teachers">
+      <div class="container section-teachers__container">
+        <div class="row">
+          <div class="section-teachers__content">
+            <h2 class="section-teachers__title title">Преподаватели курсов</h2>
+            <ul class="section-teachers__list row">
+              <li class="section-teachers__item item-teachers section-teachers__item_vladimir">
+                <picture class="item-teachers__box-picture">
+                  <source srcset="images/1110/teachers_1.avif 1x, images/1110/teachers_1@2x.avif 2x" media="(min-width: 1200px)" type="image/avif">
+                  <source srcset="images/1110/teachers_1.webp 1x, images/1110/teachers_1@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                  <source srcset="images/690/teachers_1.avif 1x, images/690/teachers_1@2x.avif 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/avif">
+                  <source srcset="images/690/teachers_1.webp 1x, images/690/teachers_1@2x.webp 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                  <source srcset="images/690/teachers_1.png 1x, images/690/teachers_1@2x.png 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                  <source srcset="images/510/teachers_1.avif 1x, images/510/teachers_1@2x.avif 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/avif">
+                  <source srcset="images/510/teachers_1.webp 1x, images/510/teachers_1@2x.webp 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/webp">
+                  <source srcset="images/510/teachers_1.png 1x, images/510/teachers_1@2x.png 2x" media="(min-width: 576px) and (max-width: 767px)">
+                  <source srcset="images/320/teachers_1.avif 1x, images/320/teachers_1@2x.avif 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/avif">
+                  <source srcset="images/320/teachers_1.webp 1x, images/320/teachers_1@2x.webp 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/webp">
+                  <source srcset="images/320/teachers_1.png 1x, images/320/teachers_1@2x.png 2x" media="(min-width: 320px) and (max-width: 575px)">
+                  <img class="item-teachers__picture" src="images/1110/teachers_1.png" srcset="images/1110/teachers_1@2x.png 2x" alt="Фотография преподавателя Владимира Петрова">
+                </picture>
+                <h3 class="item-teachers__title">Владимир Петров</h3>
+                <p class="item-teachers__desc">
+                  Лишь непосредственные участники технического прогресса неоднозначны и&nbsp;будут в&nbsp;равной степени предоставлены сами себе.
+                </p>
+              </li>
+              <li class="section-teachers__item item-teachers section-teachers__item_denis">
+                <picture class="item-teachers__box-picture">
+                  <source srcset="images/1110/teachers_2.avif 1x, images/1110/teachers_2@2x.avif 2x" media="(min-width: 1200px)" type="image/avif">
+                  <source srcset="images/1110/teachers_2.webp 1x, images/1110/teachers_2@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                  <source srcset="images/690/teachers_2.avif 1x, images/690/teachers_2@2x.avif 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/avif">
+                  <source srcset="images/690/teachers_2.webp 1x, images/690/teachers_2@2x.webp 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                  <source srcset="images/690/teachers_2.png 1x, images/690/teachers_2@2x.png 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                  <source srcset="images/510/teachers_2.avif 1x, images/510/teachers_2@2x.avif 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/avif">
+                  <source srcset="images/510/teachers_2.webp 1x, images/510/teachers_2@2x.webp 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/webp">
+                  <source srcset="images/510/teachers_2.png 1x, images/510/teachers_2@2x.png 2x" media="(min-width: 576px) and (max-width: 767px)">
+                  <source srcset="images/320/teachers_2.avif 1x, images/320/teachers_2@2x.avif 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/avif">
+                  <source srcset="images/320/teachers_2.webp 1x, images/320/teachers_2@2x.webp 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/webp">
+                  <source srcset="images/320/teachers_2.png 1x, images/320/teachers_2@2x.png 2x" media="(min-width: 320px) and (max-width: 575px)">
+                  <img class="item-teachers__picture" src="images/1110/teachers_2.png" srcset="images/1110/teachers_2@2x.png 2x" alt="Фотография преподавателя Дениса Сергеева">
+                </picture>
+                <h3 class="item-teachers__title">Денис Сергеев</h3>
+                <p class="item-teachers__desc">
+                  Безусловно, разбавленное изрядной долей эмпатии, рациональное мышление.
+                </p>
+              </li>
+              <li class="section-teachers__item item-teachers section-teachers__item_mikhail">
+                <picture class="item-teachers__box-picture">
+                  <source srcset="images/1110/teachers_3.avif 1x, images/1110/teachers_3@2x.avif 2x" media="(min-width: 1200px)" type="image/avif">
+                  <source srcset="images/1110/teachers_3.webp 1x, images/1110/teachers_3@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                  <source srcset="images/690/teachers_3.avif 1x, images/690/teachers_3@2x.avif 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/avif">
+                  <source srcset="images/690/teachers_3.webp 1x, images/690/teachers_3@2x.webp 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                  <source srcset="images/690/teachers_3.png 1x, images/690/teachers_3@2x.png 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                  <source srcset="images/510/teachers_3.avif 1x, images/510/teachers_3@2x.avif 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/avif">
+                  <source srcset="images/510/teachers_3.webp 1x, images/510/teachers_3@2x.webp 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/webp">
+                  <source srcset="images/510/teachers_3.png 1x, images/510/teachers_3@2x.png 2x" media="(min-width: 576px) and (max-width: 767px)">
+                  <source srcset="images/320/teachers_3.avif 1x, images/320/teachers_3@2x.avif 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/avif">
+                  <source srcset="images/320/teachers_3.webp 1x, images/320/teachers_3@2x.webp 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/webp">
+                  <source srcset="images/320/teachers_3.png 1x, images/320/teachers_3@2x.png 2x" media="(min-width: 320px) and (max-width: 575px)">
+                  <img class="item-teachers__picture" src="images/1110/teachers_3.png" srcset="images/1110/teachers_3@2x.png 2x" alt="Фотография преподавателя Михаила Андреева">
+                </picture>
+                <h3 class="item-teachers__title">Михаил Андреев</h3>
+                <p class="item-teachers__desc">
+                  Ясность нашей позиции очевидна: высокое качество позиционных исследований напрямую зависит от&nbsp;вывода.
+                </p>
+              </li>
+              <li class="section-teachers__item item-teachers section-teachers__item_konstantin">
+                <picture class="item-teachers__box-picture">
+                  <source srcset="images/1110/teachers_4.avif 1x, images/1110/teachers_4@2x.avif 2x" media="(min-width: 1200px)" type="image/avif">
+                  <source srcset="images/1110/teachers_4.webp 1x, images/1110/teachers_4@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                  <source srcset="images/690/teachers_4.avif 1x, images/690/teachers_4@2x.avif 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/avif">
+                  <source srcset="images/690/teachers_4.webp 1x, images/690/teachers_4@2x.webp 2x" media="(min-width: 768px) and (max-width: 1199px)" type="image/webp">
+                  <source srcset="images/690/teachers_4.png 1x, images/690/teachers_4@2x.png 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                  <source srcset="images/510/teachers_4.avif 1x, images/510/teachers_4@2x.avif 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/avif">
+                  <source srcset="images/510/teachers_4.webp 1x, images/510/teachers_4@2x.webp 2x" media="(min-width: 576px) and (max-width: 767px)" type="image/webp">
+                  <source srcset="images/510/teachers_4.png 1x, images/510/teachers_4@2x.png 2x" media="(min-width: 576px) and (max-width: 767px)">
+                  <source srcset="images/320/teachers_4.avif 1x, images/320/teachers_4@2x.avif 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/avif">
+                  <source srcset="images/320/teachers_4.webp 1x, images/320/teachers_4@2x.webp 2x" media="(min-width: 320px) and (max-width: 575px)" type="image/webp">
+                  <source srcset="images/320/teachers_4.png 1x, images/320/teachers_4@2x.png 2x" media="(min-width: 320px) and (max-width: 575px)">
+                  <img class="item-teachers__picture" src="images/1110/teachers_4.png" srcset="images/1110/teachers_4@2x.png 2x" alt="Фотография преподавателя Константина Дмитриева">
+                </picture>
+                <h3 class="item-teachers__title">Константин Дмитриев</h3>
+                <p class="item-teachers__desc">
+                  Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что существующая теория, в&nbsp;своём классическом представлении.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========== СЕКЦИЯ COURSES ==========-->
+    <section class="section-courses" id="section-courses">
+      <div class="container section-courses__container">
+        <div class="row">
+          <div class="section-courses__content">
+            <h2 class="section-courses__title title">Курсы</h2>
+            <ul class="section-courses__list row">
+              <li class="section-courses__item item-courses section-courses__item_cinema">
+                <div class="item-courses__time time-courses">
+                  <span class="time-courses__amount">
+                    <time datetime="2021-08-01T60:00:00">60</time> часов
+                  </span>
+                </div>
+                <h3 class="item-courses__title">Cinema 4d для начинающих</h3>
+                <p class="item-courses__desc">
+                  Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от стандартных подходов.
+                </p>
+                <div class="item-courses__box-btn">
+                  <a class="item-courses__btn btn" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="section-courses__item item-courses section-courses__item_blender">
+                <div class="item-courses__time time-courses">
+                  <span class="time-courses__amount">
+                    <time datetime="2021-08-01T40:00:00">40</time> часов
+                  </span>
+                </div>
+                <h3 class="item-courses__title">Blender: продвинутый уровень</h3>
+                <p class="item-courses__desc">
+                  Но убеждённость некоторых оппонентов в значительной степени обусловливает важность форм воздействия. Внезапно, тщательные исследования конкурентов представлены.
+                </p>
+                <div class="item-courses__box-btn">
+                  <a class="item-courses__btn btn" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="section-courses__item item-courses section-courses__item_3ds">
+                <div class="item-courses__time time-courses">
+                  <span class="time-courses__amount">
+                    <time datetime="2021-08-01T40:00:00">40</time> часов
+                  </span>
+                </div>
+                <h3 class="item-courses__title">Визуализация в 3ds Max</h3>
+                <p class="item-courses__desc">
+                  Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.
+                </p>
+                <div class="item-courses__box-btn">
+                  <a class="item-courses__btn btn" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="section-courses__item item-courses section-courses__item_zbrush">
+                <div class="item-courses__time time-courses">
+                  <span class="time-courses__amount">
+                    <time datetime="2021-08-01T11:27:31">80</time> часов
+                  </span>
+                </div>
+                <h3 class="item-courses__title">Скульптинг в ZBrush</h3>
+                <p class="item-courses__desc">
+                  Разнообразный и богатый опыт говорит нам, что граница обучения кадров требует определения и уточнения прогресса профессионального сообщества! В частности, постоянный количественный рост и сфера нашей активности.
+                </p>
+                <div class="item-courses__box-btn">
+                  <a class="item-courses__btn btn" href="#">Подробнее</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--========== ПОДВАЛ САЙТА ==========-->
+  <footer class="site-footer">
+    <div class="site-footer__top top-footer">
+      <div class="container top-footer__container">
+        <div class="row">
+          <div class="top-footer__content">
+            <ul class="site-footer__list">
+              <li class="site-footer__item site-footer__item_facebook">
+                <a class="site-footer__link" href="#" aria-label="Страница фейсбук"></a>
+              </li>
+              <li class="site-footer__item site-footer__item_twitter">
+                <a class="site-footer__link" href="#" aria-label="Страница твиттер"></a>
+              </li>
+              <li class="site-footer__item site-footer__item_instagram">
+                <a class="site-footer__link" href="#" aria-label="Страница инстаграм"></a>
+              </li>
+              <li class="site-footer__item site-footer__item_youtube">
+                <a class="site-footer__link" href="#" aria-label="Страница ютуб"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom bottom-footer">
+      <div class="container bottom-footer__container">
+        <div class="row">
+          <div class="bottom-footer__content">
+            <span class="site-footer__reg">
+              Skillbox <span class="site-footer__reg-color">&reg;</span> 2021
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--========== ПОДКЛЮЧЕНИЕ СКРИПТОВ ==========-->
+  <!-- Подключаем наши файлы скриптов -->
+  <script defer src="js/main.js"></script>
+</body>
+</html>

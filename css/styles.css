@@ -1,0 +1,845 @@
+/*=============== ПОДКЛЮЧЕНИЕ ШРИФТОВ ===============*/
+/* Локальные шрифты */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto_regular.woff2') format('woff2'),
+        url('../fonts/roboto_regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto_bold.woff2') format('woff2'),
+        url('../fonts/roboto_bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*=============== ПЕРЕМЕННЫЕ CSS ===============*/
+
+:root {
+
+  /*========== FONT-FAMILY ==========*/
+  /* Основное семейство шрифтов */
+  --primary-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+
+  /*========== COLOR ==========*/
+  /* Изменить любимый цвет (0 - красный, 60 - жёлтый, 120 - зелёный, 180 - бирюзовый, 240 - синий, 300 - фиолетовый) */
+  --hue-color: 246;
+  /* HSL цветовая модель */
+  --primary-color: hsl(var(--hue-color), 100%, 58%);
+  --second-color: hsl(247, 23%, 22%);
+  --third-color: hsl(0, 0%, 40%);
+  --fourth-color: hsl(240, 10%, 57%);
+  --fifth-color: hsl(240, 21%, 16%);
+  --sixth-color: hsl(238, 21%, 42%);
+  --seventh-color: hsl(238, 22%, 16%);
+  --eighth-color: hsl(223, 47%, 95%);
+  /* Универсальные цвета */
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 100%, 0%);
+
+  /*========== FONT-WEIGHT ==========*/
+  /* Основной вес шрифта */
+  --primary-font-weight: 700;
+  /* Разные вариации веса шрифта */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-heavy: 900;
+
+  /*========== FONT-SIZE ==========*/
+  /* Базовый размер шрифта ( .5rem = 8px, 1rem = 16px, 1.5rem = 24px ...) */
+  --text-size-base: 1rem;
+  /* Разные вариации размера шрифта */
+  --text-size-small: calc(var(--text-size-base) - .187rem);
+  --text-size-medium: calc(var(--text-size-base) + .125rem);
+  --text-size-big: calc(var(--text-size-base) + 1.5rem);
+  --text-size-large: calc(var(--text-size-base) + 2.75rem);
+
+  /*========== BORDER-RADIUS ==========*/
+  /* Основной радиус границы */
+  --primary-br: 20px;
+
+  /*========== Z-INDEX ==========*/
+  /* Z-index для бургера*/
+  --z-burger: 10;
+}
+
+/*=============== СТИЛИЗАЦИЯ БАЗОВЫХ ЭЛЕМЕНТОВ ===============*/
+/* Здесь обычно находятся такие элементы, как body, svg, path и т.д. */
+
+.body {
+  display: grid;
+  grid-template: minmax(80px, auto) 1fr minmax(98px, auto) / 1fr;
+  font-family: var(--primary-font-family);
+}
+
+.row {
+  display: block;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  color: var(--white-color);
+  border-radius: var(--primary-br);
+  background: var(--primary-color);
+  transition: transform .4s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateX(10px);
+}
+
+.title {
+  font-size: var(--text-size-big);
+  font-weight: var(--primary-font-weight);
+  line-height: 2.5rem;
+}
+
+/*=============== СТИЛИЗАЦИЯ ОСНОВНЫХ ЭЛЕМЕНТОВ ===============*/
+/* Шапка сайта */
+.site-header {
+  color: var(--white-color);
+  background: var(--primary-color);
+}
+
+.site-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+
+.site-header__list {
+  display: flex;
+}
+
+.site-header__item {
+  font-size: var(--text-size-medium);
+  line-height: 1.3125rem;
+  transition: opacity .4s ease-in-out;
+}
+
+.site-header__item:not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+.site-header__item:hover {
+  opacity: .5;
+}
+
+.site-header__burger {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: .35125rem .293125rem .46875rem;
+  transition: opacity .4s ease-in-out;
+}
+
+.site-header__burger:hover {
+  opacity: .5;
+}
+
+.burger-header__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20.62px;
+  height: 2px;
+  background: var(--white-color);
+}
+
+.burger-header__line_1 {
+  top: 5.62px;
+  left: 4.69px;
+  transition: opacity .4s ease-in-out;
+}
+
+.burger-header__line_2,
+.burger-header__line_3 {
+  top: 13px;
+  left: 4.69px;
+  transition: transform .4s ease-in-out;
+}
+
+.burger-header__line_4 {
+  top: 20.6px;
+  left: 4.69px;
+  transition: opacity .4s ease-in-out;
+}
+
+.burger-header__line_1.is-active,
+.burger-header__line_4.is-active {
+  opacity: 0;
+}
+
+.burger-header__line_2.is-active {
+  transform: rotate(45deg);
+}
+
+.burger-header__line_3.is-active {
+  transform: rotate(-45deg);
+}
+
+/* Секция Hero */
+.section-hero {
+  color: var(--white-color);
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, var(--sixth-color) 0%, var(--seventh-color) 100%);
+}
+
+.section-hero__content {
+  min-height: 620px;
+  padding-top: 8.125rem;
+  background: url("../images/1110/hero_picture.png") 29.8125rem .9375rem no-repeat;
+}
+
+.section-hero__title {
+  max-width: 459px;
+  margin-bottom: 1.75rem;
+  font-size: var(--text-size-large);
+  font-weight: var(--primary-font-weight);
+  line-height: 3.75rem;
+}
+
+.section-hero__desc {
+  max-width: 444px;
+  margin-bottom: 4.0625rem;
+  font-size: var(--text-size-medium);
+  line-height: 1.6875rem;
+}
+
+.section-hero__btn {
+  min-width: 270px;
+  min-height: 69px;
+  padding: 1.5rem 4.71875rem;
+  font-size: var(--text-size-medium);
+  line-height: 1.3125rem;
+}
+
+/* Секция About */
+.section-about__content {
+  min-height: 456px;
+  padding: 5rem 0 2rem 0;
+}
+
+.content-about__top {
+  max-width: 775px;
+  min-height: 186px;
+  margin-bottom: 1.375rem;
+  padding-left: 11.875rem;
+  background: url("../images/1110/ben_picture.png") 0 1.3125rem no-repeat;
+}
+
+.section-about__title {
+  max-width: 380px;
+  margin-bottom: 1.0625rem;
+  color: var(--second-color);
+}
+
+.section-about__desc {
+  color: var(--third-color);
+  line-height: 1.5rem;
+}
+
+.section-about__list {
+  display: flex;
+}
+
+.section-about__item {
+  max-width: 350px;
+  min-height: 80px;
+  padding: .875rem 0 .5625rem 6.875rem;
+}
+
+.section-about__item:not(:nth-child(3n+3)) {
+  margin-right: 1.875rem;
+}
+
+.section-about__item_eye {
+  background: url("../images/general/eye-circle.svg") 0 0 no-repeat;
+}
+
+.section-about__item_fingers {
+  background: url("../images/general/fingers.svg") 0 0 no-repeat;
+}
+
+.section-about__item_shout {
+  padding: .9375rem 0 .5625rem 6.68375rem;
+  background: url("../images/general/shout.svg") 0 0 no-repeat;
+}
+
+.item-about__desc {
+  font-weight: var(--primary-font-weight);
+  line-height: 1.1875rem;
+  color: var(--third-color);
+}
+
+/* Секция Teachers */
+.section-teachers {
+  background: var(--fifth-color);
+}
+
+.section-teachers__content {
+  min-height: 576px;
+  padding: 4.6875rem 0 4rem 0;
+}
+
+.section-teachers__title {
+  margin-bottom: 1.5rem;
+  color: var(--white-color);
+}
+
+.section-teachers__list {
+  display: grid;
+  grid-template: minmax(365px, auto) / repeat(12, 1fr);
+  gap: 30px;
+}
+
+.section-teachers__item {
+  grid-column: span 3;
+}
+
+.item-teachers__picture {
+  margin-bottom: 1.875rem;
+}
+
+.item-teachers__title {
+  margin-bottom: .4375rem;
+  font-size: var(--text-size-medium);
+  line-height: 1.6875rem;
+  color: var(--white-color);
+}
+
+.item-teachers__desc {
+  line-height: 1.5rem;
+  color: var(--fourth-color);
+}
+
+.section-teachers__item_vladimir .item-teachers__desc {
+  max-width: 254px;
+}
+
+/* Секция Courses */
+.section-courses__content {
+  min-height: 1208px;
+  padding: 4.6875rem 0 5rem 0;
+}
+
+.section-courses__title {
+  margin-bottom: 1.4375rem;
+  color: var(--fifth-color);
+}
+
+.section-courses__list {
+  display: grid;
+  grid-template: repeat(2, minmax(480px, auto)) / repeat(12, 1fr);
+  gap: 30px;
+}
+
+.section-courses__item {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 6;
+  padding: .625rem .3125rem 1.875rem 1.875rem;
+  border-radius: var(--primary-br);
+}
+
+.section-courses__item_cinema {
+  background: var(--eighth-color) url("../images/1110/courses_1.png") 0 0 no-repeat;
+}
+
+.section-courses__item_blender {
+  background: var(--eighth-color) url("../images/1110/courses_2.png") 0 0 no-repeat;
+}
+
+.section-courses__item_3ds {
+  background: var(--eighth-color) url("../images/1110/courses_3.png") 0 0 no-repeat;
+}
+
+.section-courses__item_zbrush {
+  background: var(--eighth-color) url("../images/1110/courses_4.png") 0 0 no-repeat;
+}
+
+.item-courses__time {
+  align-self: flex-end;
+  min-height: 24px;
+  margin-bottom: 176px;
+  color: var(--white-color);
+}
+
+.time-courses__amount {
+  position: relative;
+  display: inline-block;
+  line-height: 1.5rem;
+}
+
+.time-courses__amount::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -27px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/general/access_time.svg") 0 0 no-repeat;
+}
+
+.item-courses__title {
+  margin-bottom: .5625rem;
+  font-size: var(--text-size-medium);
+  font-weight: var(--primary-font-weight);
+  line-height: 1.6875rem;
+  color: var(--fifth-color);
+}
+
+.item-courses__desc {
+  margin-bottom: auto;
+  line-height: 1.5rem;
+  color: var(--third-color);
+}
+
+.section-courses__item_blender .item-courses__desc {
+  max-width: 480.65px;
+}
+
+.section-courses__item_3ds .item-courses__desc {
+  max-width: 479.76px;
+}
+
+.item-courses__btn {
+  min-width: 202px;
+  min-height: 60px;
+  padding: 1.28125rem 3.6875rem;
+  line-height: 1.1875rem;
+}
+
+/* Подвал сайта */
+.site-footer__top {
+  background: var(--second-color);
+}
+
+.top-footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.site-footer__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 186px;
+  min-height: 24px;
+}
+
+.site-footer__item {
+  height: 24px;
+  transition: opacity .4s ease-in-out;
+}
+
+.site-footer__item:hover {
+  opacity: .5;
+}
+
+.site-footer__link {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.site-footer__item_facebook .site-footer__link {
+  background: url("../images/general/facebook.svg") 0 0 no-repeat;
+}
+
+.site-footer__item_twitter .site-footer__link {
+  background: url("../images/general/twitter.svg") 0 0 no-repeat;
+}
+
+.site-footer__item_instagram .site-footer__link {
+  background: url("../images/general/instagram.svg") 0 0 no-repeat;
+}
+
+.site-footer__item_youtube .site-footer__link {
+  background: url("../images/general/youtube.svg") 0 0 no-repeat;
+}
+
+.site-footer__reg {
+  font-size: var(--text-size-small);
+  text-transform: uppercase;
+}
+
+.bottom-footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 18px;
+  padding-top: .25rem;
+}
+
+.site-footer__reg-color {
+  color: var(--primary-color);
+}
+
+/* Медиа-запросы */
+/* Планшет-690 */
+@media screen and (max-width: 1199px) {
+  .section-teachers__item {
+    grid-column: span 6;
+  }
+
+  .section-teachers__item_vladimir .item-teachers__desc {
+    max-width: 100%;
+  }
+}
+/* Планшет-510 */
+@media screen and (max-width: 991px) {
+  :root {
+    --text-size-large: calc(var(--text-size-base) + 2.125rem);
+  }
+
+  .section-hero__content {
+    background: url("../images/690/hero_picture.png") 22.5rem 7.3125rem no-repeat;
+  }
+
+  .section-hero__title {
+    margin-bottom: 1.0625rem;
+    line-height: 3.125rem;
+  }
+
+  .section-hero__desc {
+    max-width: 330px;
+  }
+
+  .section-about__content {
+    min-height: 587px;
+  }
+
+  .content-about__top {
+    padding-left: 15rem;
+    background: url("../images/690/ben_picture.png") 0 1.4375rem no-repeat;
+  }
+
+  .section-about__item {
+    max-width: 210px;
+    padding: 5.75rem 0 0 0;
+  }
+
+  .section-teachers__content {
+    min-height: 892px;
+    padding-bottom: 2rem;
+  }
+
+  .section-teachers__list {
+    grid-template: repeat(2, minmax(334px, auto)) / repeat(12, 1fr);
+  }
+
+  .section-courses__content {
+    min-height: 1360px;
+  }
+
+  .section-courses__list {
+    grid-template-rows: repeat(2, minmax(556px, auto));
+  }
+
+  .section-courses__item {
+    padding-right: .625rem;
+  }
+
+  .section-courses__item_cinema .item-courses__desc,
+  .section-courses__item_3ds .item-courses__desc,
+  .section-courses__item_zbrush .item-courses__desc {
+    max-width: 270px;
+  }
+
+  .section-courses__item_cinema {
+    background: var(--eighth-color) url("../images/690/courses_1.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_blender {
+    background: var(--eighth-color) url("../images/690/courses_2.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_3ds {
+    background: var(--eighth-color) url("../images/690/courses_3.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_zbrush {
+    background: var(--eighth-color) url("../images/690/courses_4.png") 0 0 no-repeat;
+  }
+
+
+  .item-courses__btn {
+    min-width: 195px;
+    padding: 1.28125rem 3.46875rem;
+  }
+}
+/* Мобильные устройства-320 */
+@media screen and (max-width: 767px) {
+  .site-header__content {
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    min-height: 133px;
+  }
+
+  .section-hero__content {
+    min-height: 567px;
+    padding-top: 4.8125rem;
+    background: none;
+  }
+
+  .section-about__content {
+    min-height: 674px;
+  }
+
+  .content-about__top {
+    padding-left: 11.25rem;
+    background: url("../images/510/ben_picture.png") 0 0 no-repeat;
+  }
+
+  .section-about__item {
+    max-width: 150px;
+  }
+
+  .section-teachers__content {
+    min-height: 940px;
+  }
+
+  .section-courses__content {
+    min-height: 1554px;
+  }
+
+  .section-courses__list {
+    grid-template-rows: repeat(2, minmax(653px, auto));
+  }
+
+  .item-courses__title {
+    line-height: 1.4375rem;
+  }
+
+  .item-courses__desc {
+    max-width: 180px!important;
+  }
+
+  .section-courses__item_3ds .item-courses__title {
+    max-width: 140px;
+  }
+
+  .section-courses__item_zbrush .item-courses__title {
+    line-height: 1.6875rem;
+  }
+
+  .section-courses__item_cinema {
+    background: var(--eighth-color) url("../images/510/courses_1.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_blender {
+    background: var(--eighth-color) url("../images/510/courses_2.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_3ds {
+    background: var(--eighth-color) url("../images/510/courses_3.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_zbrush {
+    background: var(--eighth-color) url("../images/510/courses_4.png") 0 0 no-repeat;
+  }
+
+  .item-courses__btn {
+    min-width: 180px;
+    padding: 1.28125rem 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  :root {
+    --text-size-big: calc(var(--text-size-base) + .25rem);
+    --text-size-large: calc(var(--text-size-base) + .875rem);
+  }
+
+  .site-header__content {
+    position: relative;
+    flex-wrap: nowrap;
+    align-content: initial;
+    justify-content: space-between;
+    min-height: 80px;
+
+  }
+
+  .site-header__nav {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: min(320px, 100%);
+    min-height: 433px;
+    padding: 4.75rem 0 0 .9375rem;
+    background: var(--second-color);
+    transform: translateY(-100%);
+    transition: transform .4s ease-in-out;
+  }
+
+  .menu-active {
+    transform: translateY(0);
+  }
+
+  .site-header__list {
+    flex-direction: column;
+    width: min(132px, 100%);
+    min-height: 252px;
+  }
+
+  .site-header__item:not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+
+  .site-header__burger {
+    display: inline-block;
+  }
+
+  .section-hero__content {
+    min-height: 353px;
+    padding-top: 3.125rem;
+  }
+
+  .section-hero__title {
+    max-width: 226px;
+    margin-bottom: .3125rem;
+    line-height: 1.875rem;
+  }
+
+  .section-hero__desc {
+    max-width: 290px;
+    margin-bottom: 2.8125rem;
+    font-size: var(--text-size-base);
+    line-height: 1.3125rem;
+    letter-spacing: -.1px;
+  }
+
+  .section-hero__btn {
+    min-width: 213px;
+    min-height: 60px;
+    padding: 1.28125rem 3.34375rem;
+    font-size: var(--text-size-base);
+  }
+
+  .section-about__content {
+    min-height: 693px;
+    padding-top: 3.125rem;
+  }
+
+  .content-about__top {
+    padding-left: 0;
+    background: none;
+  }
+
+  .section-about__title {
+    max-width: 290px;
+    margin-bottom: .125rem;
+    line-height: 1.625rem;
+  }
+
+  .section-about__desc {
+    max-width: 290px;
+  }
+
+  .section-about__list {
+    flex-direction: column;
+  }
+
+  .section-about__item {
+    max-width: 290px;
+    padding: .375rem 0 .375rem 6.875rem;
+  }
+
+  .section-about__item:not(:nth-child(3n+3)) {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .section-teachers__content {
+    min-height: 1550px;
+    padding-top: 2.3125rem;
+  }
+
+  .section-teachers__title {
+    margin-bottom: 1rem;
+  }
+
+  .section-teachers__list {
+    grid-template: repeat(4, minmax(310px, auto)) / repeat(2, 1fr);
+    row-gap: 23px;
+  }
+
+  .section-teachers__item {
+    grid-column: span 2;
+  }
+
+  .item-teachers__picture {
+    margin-bottom: 2rem;
+  }
+
+  .item-teachers__desc {
+    max-width: 290px!important;
+  }
+
+  .section-courses__content {
+    min-height: 2877px;
+    padding: 2.25rem 0 0 0;
+  }
+
+  .section-courses__title {
+    margin-bottom: 1rem;
+  }
+
+  .section-courses__list {
+    grid-template: repeat(4, minmax(653px, auto)) / repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .section-courses__item {
+    grid-column: span 2;
+  }
+
+  .section-courses__item_cinema {
+    background: var(--eighth-color) url("../images/320/courses_1.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_blender {
+    background: var(--eighth-color) url("../images/320/courses_2.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_3ds {
+    background: var(--eighth-color) url("../images/320/courses_3.png") 0 0 no-repeat;
+  }
+
+  .section-courses__item_zbrush {
+    background: var(--eighth-color) url("../images/320/courses_4.png") 0 0 no-repeat;
+  }
+
+  .item-courses__title {
+    max-width: 194px;
+    line-height: 1.5rem;
+  }
+
+  .item-courses__desc {
+    max-width: 230px!important;
+  }
+
+  .item-courses__btn {
+    min-width: 195px;
+    padding: 1.28125rem 3.46875rem;
+  }
+}
