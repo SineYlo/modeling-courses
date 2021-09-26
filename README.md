@@ -1,23 +1,22 @@
-# Modeling Courses
+# Modeling Courses 🏯
 
-![Lines of code](https://img.shields.io/tokei/lines/github/sineylo/Modeling-Courses?style=for-the-badge) ![Code size](https://img.shields.io/github/languages/code-size/SineYlo/Modeling-Courses?style=for-the-badge)
+![Lines of code](https://img.shields.io/tokei/lines/github/sineylo/Modeling-Courses?style=for-the-badge) ![Code size](https://img.shields.io/github/languages/code-size/SineYlo/Modeling-Courses?style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/SineYlo/Modeling-Courses?style=for-the-badge)
 
-![Modeling Courses](https://i.ibb.co/ZSsWnF5/msedge-EPOMYIEd1-R.png "Modeling Courses")
+![Modeling Courses](https://i.ibb.co/SnBkYHQ/Ashampoo-Snap-26-2021-20h58m18s-002-3-D-Microsoft-Edge.jpg)
 
 ***
 
 Site topic: `3D modeling courses`  
 Site language: `RU`
 
-### What is implemented on this site:
+### 📚 What was implemented by me:
 
-- Used bootstrap v. 4.6
-- Responsive on breakpoints 1110, 690, 510, 320
-- Responsive images using the picture element
-- Full cross-browser support
+- The site was made with `Bootstrap v4.6` + `CSS Grid`
+- Implemented fully responsive layout with main breakpoints at - `690`, `510`, `320`
+- Work done with `Pixel Perfect`
 
-***
+### 🐍 My comments on this work:
 
-🔸 The layout was just awful, probably now almost everyone is like that  
-🔸 Designers simply hammer the bolt into everything, in fact, that's why it happens  
-🔸 If at least 50-60% understood how the development works, it would be good
+🔸 This is one of those jobs on which I had to use Bootstrap (or rather, as I had no choice) because it was homework (i think this was the first and last time i used it)  
+🔸 The layout itself is not to say that it was especially well-made by the designer, I had to correct a lot myself  
+🔸 In terms of ease, it is probably the simplest, but this is not certain
